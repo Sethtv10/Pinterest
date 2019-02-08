@@ -109,6 +109,9 @@ class ViewController: UIViewController {
        let ntf = UITextField()
         ntf.translatesAutoresizingMaskIntoConstraints = false
         ntf.placeholder = "Name"
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
+        ntf.leftView = paddingView
+        ntf.leftViewMode = .always
         
         return ntf
     }()
@@ -118,6 +121,9 @@ class ViewController: UIViewController {
         ntf.translatesAutoresizingMaskIntoConstraints = false
         ntf.placeholder = "Password"
         ntf.isSecureTextEntry = true
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
+        ntf.leftView = paddingView
+        ntf.leftViewMode = .always
         
         return ntf
     }()
@@ -126,6 +132,9 @@ class ViewController: UIViewController {
         let ntf = UITextField()
         ntf.translatesAutoresizingMaskIntoConstraints = false
         ntf.placeholder = "Mail"
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 20))
+        ntf.leftView = paddingView
+        ntf.leftViewMode = .always
         
         
         return ntf
