@@ -95,11 +95,18 @@ class ViewController: UIViewController {
                 if error != nil{
                     print(error)
                 }
-                var user = data?.user
+                let user = data?.user
                 if let uid = user?.uid {
-                    var db = Database.database().reference(fromURL: "https://pinterest-fa297.firebaseio.com/")
-                    var UserRef = db.child("users").child(uid)
+                    let db = Database.database().reference(fromURL: "https://pinterest-fa297.firebaseio.com/")
+                    let UserRef = db.child("users").child(uid)
                     UserRef.updateChildValues(["name": name, "mail": mail,"pass": pass])
+                    let MessageRef = db.child("messages").child(uid)
+                    MessageRef.updateChildValues(["user": name, "message": "Hola, este es un mensaje Default"])
+                    let ref = db.child("users").child(uid)
+                    ref.removeValue { error, _ in
+                        
+                        print(error)
+                    }
                 }
             }
         }
