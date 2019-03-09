@@ -17,37 +17,70 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        view.backgroundColor = UIColor.init(red: 61/255, green: 91/255, blue: 161/255, alpha: 1)
+        view.backgroundColor = UIColor.init(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
        
         //Add Subviews
          view.addSubview(loginImage)
-        view.addSubview(inputContainerView)
-        view.addSubview(firstButton)
-        inputContainerView.addSubview(nameTextField)
-        inputContainerView.addSubview(mailTextField)
-        inputContainerView.addSubview(passTextField)
-        
+       // view.addSubview(inputContainerView)
+        view.addSubview(welcomLabel)
+        view.addSubview(mailButton)
+        view.addSubview(facebookButton)
+        view.addSubview(googleButton)
+        view.addSubview(starButton)
+        view.addSubview(termsLabel)
         //Image View
-        
         loginImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 170).isActive = true
         loginImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginImage.heightAnchor.constraint(equalToConstant: 300).isActive = true
         loginImage.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
         loginImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
+        //Welcome label
+        welcomLabel.topAnchor.constraint(equalTo: loginImage.bottomAnchor).isActive = true
+        welcomLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        welcomLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
+       
+        
         //Input Container View
-        inputContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+   /*     inputContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         inputContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         inputContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
-       
+       */
         
-        //Fisrt Button
-        firstButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        firstButton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 10).isActive = true
-        firstButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        firstButton.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
+        //Mail Button
+        mailButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        mailButton.topAnchor.constraint(equalTo: welcomLabel.bottomAnchor, constant: 10).isActive = true
+        mailButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        mailButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
         
+        //Facebook Button
+        facebookButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        facebookButton.topAnchor.constraint(equalTo: mailButton.bottomAnchor, constant: 10).isActive = true
+        facebookButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        facebookButton.widthAnchor.constraint(equalTo: mailButton.widthAnchor).isActive = true
+        
+        //Google Button
+        googleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        googleButton.topAnchor.constraint(equalTo: facebookButton.bottomAnchor, constant: 10).isActive = true
+        googleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        googleButton.widthAnchor.constraint(equalTo: mailButton.widthAnchor).isActive = true
+        
+        //Start Button
+        starButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        starButton.topAnchor.constraint(equalTo: googleButton.bottomAnchor, constant: 30).isActive = true
+        starButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        starButton.widthAnchor.constraint(equalTo: mailButton.widthAnchor).isActive = true
+        
+        
+        
+        //Term label
+        termsLabel.topAnchor.constraint(equalTo: starButton.bottomAnchor, constant: 30).isActive = true
+        termsLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        termsLabel.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
+        
+        
+        /*
         //Text View
         nameTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3).isActive = true
         nameTextField.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
@@ -60,9 +93,28 @@ class ViewController: UIViewController {
         passTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3).isActive = true
         passTextField.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
         passTextField.bottomAnchor.constraint(equalTo: inputContainerView.bottomAnchor).isActive = true
-        
+        */
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    let  welcomLabel : UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "Te Damos la bienvenida a Pinterest"
+        view.textAlignment = .center
+        view.textColor =  UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+        return view
+    }()
+    
+    let  termsLabel : UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = "Si continuas, aceptas las Condiciones de Servicio y la \nPolitica de privacidad de Pinterest"
+        view.textAlignment = .left
+        view.font = UIFont(name:"fontname", size: 8.0)
+        view.textColor =  UIColor.init(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        return view
+    }()
     
     let  inputContainerView : UIView = {
        let view = UIView()
@@ -73,13 +125,48 @@ class ViewController: UIViewController {
         return view
     }()
     
-    let firstButton : UIButton = {
+    let mailButton : UIButton = {
        let ub = UIButton()
-        ub.backgroundColor = UIColor.init(red: 40/255, green: 91/255, blue: 131/255, alpha: 1)
-        ub.setTitle("Register", for: .normal)
+        ub.backgroundColor = UIColor.init(red: 230/255, green: 0/255, blue: 35/255, alpha: 1)
+        ub.setTitle("Continuar con Correo", for: .normal)
         ub.layer.cornerRadius = 6
         ub.layer.masksToBounds = true
         ub.translatesAutoresizingMaskIntoConstraints = false
+        ub.addTarget(self, action: #selector(nextView), for: .touchUpInside)
+        return ub
+    }()
+    
+    let facebookButton : UIButton = {
+        let ub = UIButton()
+        ub.backgroundColor = UIColor.init(red: 66/255, green: 103/255, blue: 178/255, alpha: 1)
+        ub.setTitle("Facebook", for: .normal)
+        ub.layer.cornerRadius = 6
+        ub.layer.masksToBounds = true
+        ub.translatesAutoresizingMaskIntoConstraints = false
+        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        return ub
+    }()
+    
+    let googleButton : UIButton = {
+        let ub = UIButton()
+        ub.backgroundColor = UIColor.init(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
+        ub.setTitle("Google", for: .normal)
+        ub.layer.cornerRadius = 6
+        ub.layer.masksToBounds = true
+        ub.translatesAutoresizingMaskIntoConstraints = false
+        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        return ub
+    }()
+    
+    let starButton : UIButton = {
+        let ub = UIButton()
+        ub.backgroundColor = UIColor.init(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
+        ub.setTitle("Iniciar Sesion", for: .normal)
+        ub.layer.cornerRadius = 6
+        ub.layer.masksToBounds = true
+        ub.translatesAutoresizingMaskIntoConstraints = false
+        ub.setTitleColor(UIColor.init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1), for: .normal)
+        
         ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         return ub
     }()
@@ -110,6 +197,11 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc func nextView(){
+        var mail = MainView()
+        self.navigationController?.pushViewController(mail, animated: true )
     }
     
     let nameTextField : UITextField = {
