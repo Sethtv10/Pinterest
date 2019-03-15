@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D3509BF4A455DA9C0BDA36D /* Pods_Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0C2609022EB3AC57A767AA /* Pods_Pinterest.framework */; };
+		50191C20223B28BE000EB4EA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50191C1F223B28BE000EB4EA /* SignInView.swift */; };
 		503CBE972234565800A43B64 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CBE962234565800A43B64 /* PasswordView.swift */; };
 		503CBE99223458B800A43B64 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CBE98223458B800A43B64 /* AgeView.swift */; };
 		509B65372203D108002F53FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B65362203D108002F53FC /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		3A0C2609022EB3AC57A767AA /* Pods_Pinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50191C1F223B28BE000EB4EA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		503CBE962234565800A43B64 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		503CBE98223458B800A43B64 /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
 		509B65332203D108002F53FC /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				509B65422203D10A002F53FC /* Info.plist */,
 				503CBE962234565800A43B64 /* PasswordView.swift */,
 				503CBE98223458B800A43B64 /* AgeView.swift */,
+				50191C1F223B28BE000EB4EA /* SignInView.swift */,
 			);
 			path = Pinterest;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509B65392203D108002F53FC /* ViewController.swift in Sources */,
+				50191C20223B28BE000EB4EA /* SignInView.swift in Sources */,
 				503CBE99223458B800A43B64 /* AgeView.swift in Sources */,
 				50D6C6382228D200002AA284 /* MailView.swift in Sources */,
 				509B65372203D108002F53FC /* AppDelegate.swift in Sources */,

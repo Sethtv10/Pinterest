@@ -167,7 +167,7 @@ class ViewController: UIViewController {
         ub.translatesAutoresizingMaskIntoConstraints = false
         ub.setTitleColor(UIColor.init(red: 50/255, green: 50/255, blue: 50/255, alpha: 1), for: .normal)
         
-        ub.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        ub.addTarget(self, action: #selector(signInView), for: .touchUpInside)
         return ub
     }()
     
@@ -202,6 +202,11 @@ class ViewController: UIViewController {
     @objc func nextView(){
         var mail = MainView()
         self.navigationController?.pushViewController(mail, animated: true )
+    }
+    
+    @objc func signInView(){
+        var signin = SigInView()
+        self.navigationController?.pushViewController(signin, animated: true )
     }
     
     let nameTextField : UITextField = {
