@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 
+
 class SigInView: UIViewController {
     
     
@@ -91,7 +92,8 @@ class SigInView: UIViewController {
                 if error != nil{
                     print(error)
                 }else{
-                    print("Se incio Sesion");
+                    let table = MainTableViewController();
+                    self.navigationController?.pushViewController(table, animated: true )
                 }
                 let user = data?.user
     
