@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2D3509BF4A455DA9C0BDA36D /* Pods_Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0C2609022EB3AC57A767AA /* Pods_Pinterest.framework */; };
+		500732B022600C4300307EBE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500732AF22600C4300307EBE /* CollectionViewController.swift */; };
+		500732B3226016F900307EBE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500732B2226016F900307EBE /* Extensions.swift */; };
 		50191C20223B28BE000EB4EA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50191C1F223B28BE000EB4EA /* SignInView.swift */; };
 		503CBE972234565800A43B64 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CBE962234565800A43B64 /* PasswordView.swift */; };
 		503CBE99223458B800A43B64 /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CBE98223458B800A43B64 /* AgeView.swift */; };
-		504097D5225694B800EEF98A /* MainTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504097D4225694B800EEF98A /* MainTableViewTableViewController.swift */; };
+		505486A4227286F600F1C0AB /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505486A3227286F600F1C0AB /* PinterestLayout.swift */; };
+		505486A62272931F00F1C0AB /* ClickedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505486A52272931F00F1C0AB /* ClickedImageView.swift */; };
 		509B65372203D108002F53FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B65362203D108002F53FC /* AppDelegate.swift */; };
 		509B65392203D108002F53FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B65382203D108002F53FC /* ViewController.swift */; };
 		509B653E2203D10A002F53FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509B653D2203D10A002F53FC /* Assets.xcassets */; };
@@ -22,10 +25,13 @@
 
 /* Begin PBXFileReference section */
 		3A0C2609022EB3AC57A767AA /* Pods_Pinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500732AF22600C4300307EBE /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		500732B2226016F900307EBE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		50191C1F223B28BE000EB4EA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		503CBE962234565800A43B64 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		503CBE98223458B800A43B64 /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
-		504097D4225694B800EEF98A /* MainTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewTableViewController.swift; sourceTree = "<group>"; };
+		505486A3227286F600F1C0AB /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		505486A52272931F00F1C0AB /* ClickedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickedImageView.swift; sourceTree = "<group>"; };
 		509B65332203D108002F53FC /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509B65362203D108002F53FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509B65382203D108002F53FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		500732B1226016E200307EBE /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				500732B2226016F900307EBE /* Extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		509B652A2203D107002F53FC = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +94,7 @@
 		509B65352203D108002F53FC /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
+				500732B1226016E200307EBE /* extensions */,
 				50BFC769220D10930056E0CB /* GoogleService-Info.plist */,
 				509B65362203D108002F53FC /* AppDelegate.swift */,
 				509B65382203D108002F53FC /* ViewController.swift */,
@@ -90,7 +105,9 @@
 				503CBE962234565800A43B64 /* PasswordView.swift */,
 				503CBE98223458B800A43B64 /* AgeView.swift */,
 				50191C1F223B28BE000EB4EA /* SignInView.swift */,
-				504097D4225694B800EEF98A /* MainTableViewTableViewController.swift */,
+				500732AF22600C4300307EBE /* CollectionViewController.swift */,
+				505486A3227286F600F1C0AB /* PinterestLayout.swift */,
+				505486A52272931F00F1C0AB /* ClickedImageView.swift */,
 			);
 			path = Pinterest;
 			sourceTree = "<group>";
@@ -232,9 +249,12 @@
 				509B65392203D108002F53FC /* ViewController.swift in Sources */,
 				50191C20223B28BE000EB4EA /* SignInView.swift in Sources */,
 				503CBE99223458B800A43B64 /* AgeView.swift in Sources */,
+				500732B3226016F900307EBE /* Extensions.swift in Sources */,
 				50D6C6382228D200002AA284 /* MailView.swift in Sources */,
+				500732B022600C4300307EBE /* CollectionViewController.swift in Sources */,
+				505486A62272931F00F1C0AB /* ClickedImageView.swift in Sources */,
+				505486A4227286F600F1C0AB /* PinterestLayout.swift in Sources */,
 				509B65372203D108002F53FC /* AppDelegate.swift in Sources */,
-				504097D5225694B800EEF98A /* MainTableViewTableViewController.swift in Sources */,
 				503CBE972234565800A43B64 /* PasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

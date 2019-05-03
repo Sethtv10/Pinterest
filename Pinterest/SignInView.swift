@@ -92,8 +92,8 @@ class SigInView: UIViewController {
                 if error != nil{
                     print(error)
                 }else{
-                    let table = MainTableViewController();
-                    self.navigationController?.pushViewController(table, animated: true )
+                   // let table = MainTableViewController();
+//                    self.navigationController?.pushViewController(table, animated: true )
                 }
                 let user = data?.user
     
