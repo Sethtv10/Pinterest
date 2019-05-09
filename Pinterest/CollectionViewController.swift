@@ -16,6 +16,16 @@ struct Celda {
     var image : String
     
 }
+
+var statusImageView : UIImageView = {
+    let imageView = UIImageView()
+    imageView.isUserInteractionEnabled = true
+    return imageView
+}()
+
+var zoomImageView = UIImageView()
+
+
 let imagenes: [UIImage] = [#imageLiteral(resourceName: "imageold")]
 
 class CollectionViewController: UICollectionViewController {
@@ -65,9 +75,33 @@ class CollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PinCell
-        let clicked = ClikedImageView()
-        clicked.loginImage.image = cell.imageViewCell1.image
-        self.navigationController?.pushViewController(clicked, animated: true)
+        statusImageView = cell.imageViewCell1
+        if let startingFrame = statusImageView.superview?.convert(statusImageView.frame, to: nil),let keyWindow = UIApplication.shared.keyWindow {
+            
+ 
+            zoomImageView.frame = startingFrame
+            zoomImageView.isUserInteractionEnabled = true
+            zoomImageView.image = statusImageView.image
+            zoomImageView.alpha = 1
+            keyWindow.addSubview(zoomImageView)
+            
+           
+            let height = (self.view.frame.width / (cell.imageViewCell1.image?.size.width)!) *  (cell.imageViewCell1.image?.size.height)!
+            
+            UIView.animate(withDuration: 0.20, delay: 0, options: .curveEaseOut, animations: {
+                zoomImageView.frame = CGRect(x: 0, y:75, width: self.view.frame.width, height: height)
+            })
+            
+            UIView.animate(withDuration: 1, delay: 0, options: .transitionCrossDissolve, animations: {
+                zoomImageView.alpha = 0
+            })
+            
+            let details = ClikedImageView()
+            details.image = statusImageView.image
+            details.height = height
+            
+            self.navigationController?.pushViewController(details, animated: true)
+        }
         
     }
     

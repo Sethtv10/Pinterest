@@ -9,28 +9,33 @@
 import UIKit
 
 class ClikedImageView: UIViewController{
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        view.backgroundColor = .white
-        //Add Subviews
-        view.addSubview(loginImage)
-        //Image View
-        loginImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 170).isActive = true
-        loginImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loginImage.heightAnchor.constraint(equalToConstant: 300).isActive = true
-        loginImage.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30).isActive = true
-        loginImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        var image: UIImage? {
+            didSet {
+                if let image = image {
+                    imageView.image = image
+                }
+            }
+        }
         
+        var height : CGFloat?
         
-    }
-    let loginImage :  UIImageView = {
-        let li =  UIImageView(frame: CGRect(x: 105, y: 150, width: 200, height: 200))
-        li.image = UIImage(named:"image.png")
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            view.backgroundColor = .white
+            view.addSubview(imageView)
+            
+            if let height = height {
+                imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 75).isActive = true
+                imageView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+                imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+                imageView.heightAnchor.constraint(equalToConstant: height).isActive = true
+            }
+        }
         
-        
-        
-        return li
-    }()
+        let imageView : UIImageView = {
+            let imageView = UIImageView()
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            return imageView
+        }()
 }
